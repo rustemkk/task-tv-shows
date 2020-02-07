@@ -43,6 +43,9 @@ const ShowsPage = ({ loadShows, shows }) => {
           </span>
         </div>
       )}
+      {[...Array(50)].map((_, index) =>
+        <div key={index} className={s.ShowPlaceholder} />
+      )}
     </div>
   );
 }

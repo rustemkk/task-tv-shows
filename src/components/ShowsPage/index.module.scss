@@ -1,34 +1,32 @@
 .Shows {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
+
+  .ShowPlaceholder {
+    margin: 10px;
+    max-width: 300px;
+    width: 200px;
+    flex-basis: 200px;
+    flex-grow: 1;
+  }
 
   .Show {
+    margin: 10px;
+    max-width: 300px;
     width: 200px;
-    padding-top: 290px;
+    flex-basis: 200px;
+    flex-grow: 1;
     position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0 20px 20px 0;
     display: flex;
     flex-direction: column;
+    transition: all 0.25s;
     &:hover {
       cursor: pointer;
-      img {
-        width: 210px;
-        top: -5px;
-        left: -5px;
-      }
+      transform: scale(1.05);
     }
 
     img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 200px;
-      transition: all 0.25s;
+      width: 100%;
     }
 
     .Rating {
