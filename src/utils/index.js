@@ -1,6 +1,7 @@
-const apiUrl = 'http://api.tvmaze.com';
+const apiUrl = 'https://api.tvmaze.com';
 
 export const apiGET = (path) => {
   return fetch(`${apiUrl}${path}`, { method: 'GET' })
-    .then(res => res.json());
+    .then(res => res.json())
+    .catch(err => console.log('Error: ', err));
 }

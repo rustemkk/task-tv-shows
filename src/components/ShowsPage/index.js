@@ -2,11 +2,11 @@ import { get } from 'lodash';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 import RatingLabel from 'components/RatingLabel';
 import { loadShows } from 'modules/shows/actions';
 import { getAllShows } from 'modules/shows/selectors';
-import history from 'utils/history';
 
 import s from './index.module.scss';
 
@@ -20,6 +20,8 @@ const mapDispatchToProps = {
 };
 
 const ShowsPage = ({ loadShows, shows }) => {
+
+  const history = useHistory();
 
   useEffect(() => {
     loadShows();
