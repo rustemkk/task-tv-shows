@@ -1,0 +1,54 @@
+.Shows {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  .Show {
+    width: 200px;
+    padding-top: 290px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    &:hover {
+      cursor: pointer;
+      img {
+        width: 210px;
+        top: -5px;
+        left: -5px;
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      transition: all 0.25s;
+    }
+
+    .Rating {
+      position: absolute;
+      top: 20px;
+      left: -10px;
+      z-index: 1;
+    }
+
+    .Name {
+      padding: 10px 0 0 0;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .Genre {
+      padding: 5px 0 0 0;
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: lowercase;
+    }
+  }
+}
