@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/task-tv-shows/static/css/main.2681d537.chunk.css",
-    "main.js": "/task-tv-shows/static/js/main.cf3ebd15.chunk.js",
-    "main.js.map": "/task-tv-shows/static/js/main.cf3ebd15.chunk.js.map",
+    "main.css": "/task-tv-shows/static/css/main.9f853f27.chunk.css",
+    "main.js": "/task-tv-shows/static/js/main.ca480bbc.chunk.js",
+    "main.js.map": "/task-tv-shows/static/js/main.ca480bbc.chunk.js.map",
     "runtime-main.js": "/task-tv-shows/static/js/runtime-main.2adde000.js",
     "runtime-main.js.map": "/task-tv-shows/static/js/runtime-main.2adde000.js.map",
-    "static/js/2.a060bc24.chunk.js": "/task-tv-shows/static/js/2.a060bc24.chunk.js",
-    "static/js/2.a060bc24.chunk.js.map": "/task-tv-shows/static/js/2.a060bc24.chunk.js.map",
+    "static/js/2.2a8e6c13.chunk.js": "/task-tv-shows/static/js/2.2a8e6c13.chunk.js",
+    "static/js/2.2a8e6c13.chunk.js.map": "/task-tv-shows/static/js/2.2a8e6c13.chunk.js.map",
     "index.html": "/task-tv-shows/index.html",
-    "precache-manifest.6f14722a4d5d03c0f78491a435c53f4c.js": "/task-tv-shows/precache-manifest.6f14722a4d5d03c0f78491a435c53f4c.js",
+    "precache-manifest.bcf17af1b8dd33f3fdb54f2ae720252b.js": "/task-tv-shows/precache-manifest.bcf17af1b8dd33f3fdb54f2ae720252b.js",
     "service-worker.js": "/task-tv-shows/service-worker.js",
-    "static/css/main.2681d537.chunk.css.map": "/task-tv-shows/static/css/main.2681d537.chunk.css.map",
-    "static/js/2.a060bc24.chunk.js.LICENSE.txt": "/task-tv-shows/static/js/2.a060bc24.chunk.js.LICENSE.txt"
+    "static/css/main.9f853f27.chunk.css.map": "/task-tv-shows/static/css/main.9f853f27.chunk.css.map",
+    "static/js/2.2a8e6c13.chunk.js.LICENSE.txt": "/task-tv-shows/static/js/2.2a8e6c13.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2adde000.js",
-    "static/js/2.a060bc24.chunk.js",
-    "static/css/main.2681d537.chunk.css",
-    "static/js/main.cf3ebd15.chunk.js"
+    "static/js/2.2a8e6c13.chunk.js",
+    "static/css/main.9f853f27.chunk.css",
+    "static/js/main.ca480bbc.chunk.js"
   ]
 }
