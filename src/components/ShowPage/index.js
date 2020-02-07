@@ -13,7 +13,7 @@ import s from './index.module.scss';
 
 
 const mapStateToProps = (state, ownProps) => {
-  const showId = get(ownProps, 'match.params.showId');
+  const showId = +get(ownProps, 'match.params.showId');
 
   return {
     episodes: getEpisodesByShowId(showId)(state),
@@ -38,7 +38,7 @@ const ShowPage = ({ episodes, loadEpisodes, loadShow, show, showId }) => {
   }, [loadShow, show, showId]);
 
   useEffect(() => {
-    if (showId && !episodes.length) {
+    if (showId && !episodes.length <= 1) {
       loadEpisodes(showId);
     }
   }, [episodes, loadEpisodes, showId]);
@@ -54,7 +54,12 @@ const ShowPage = ({ episodes, loadEpisodes, loadShow, show, showId }) => {
           {', '}
           {show.premiered.substring(0, 4)}
         </div>
-        <div className={s.Summary} dangerouslySetInnerHTML={{ __html: show.summary }} />
+        <div dangerouslySetInnerHTML={{ __html: show.summary }} />
+        <div className={s.ShowProperty}>
+          <span>Rating</span>
+          {': '}
+          {show.rating.average}
+        </div>
         <div className={s.ShowProperty}>
           <span>Genre</span>
           {': '}
@@ -65,7 +70,7 @@ const ShowPage = ({ episodes, loadEpisodes, loadShow, show, showId }) => {
           {': '}
           {show.language}
         </div>
-        {episodes.length &&
+        {episodes.length > 0 &&
           <div className={s.Episodes}>
             Episodes:
             {episodes.map(episode =>
@@ -89,6 +94,7 @@ ShowPage.propTypes = {
   loadEpisodes: PropTypes.func.isRequired,
   loadShow: PropTypes.func.isRequired,
   show: PropTypes.object,
+  showId: PropTypes.number.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShowPage);

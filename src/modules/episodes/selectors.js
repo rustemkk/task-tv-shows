@@ -11,7 +11,9 @@ export const getEpisodesIds = (state) =>
 export const getAllEpisodes = createSelector(
   getEpisodesEntities,
   getEpisodesIds,
-  (episodes, episodesIds) => episodesIds.map(id => episodes[id]).sort((a, b) => a.airdate > b.airdate ? -1 : 1)
+  (episodes, episodesIds) => episodesIds
+    .map(id => episodes[id])
+    .sort((a, b) => a.season * 1000 + a.number > b.season * 1000 + b.number ? -1 : 1)
 );
 
 export const getEpisodeById = (episodeId) => createSelector(

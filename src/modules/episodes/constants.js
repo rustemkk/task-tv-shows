@@ -1,2 +1,4 @@
+export const LOAD_EPISODE_REQUEST = 'episodes/LOAD_EPISODE_REQUEST';
+
 export const LOAD_EPISODES_REQUEST = 'episodes/LOAD_EPISODES_REQUEST';
-export const LOAD_EPISODES_SUCCESS = 'episodes/LOAD_SHOW_SUCCESS';
+export const LOAD_EPISODES_SUCCESS = 'episodes/LOAD_EPISODES_SUCCESS';

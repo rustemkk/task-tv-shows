@@ -1,0 +1,68 @@
+.EpisodePage {
+  display: flex;
+  flex-direction: column;
+
+  .ImageContainer {
+    .Image {
+      width: 100%;
+    }
+  }
+
+  .ContentContainer {
+    padding-left: 0;
+    width: 100%;
+
+    .Name {
+      padding: 10px 0 0 0;
+      font-size: 28px;
+      font-weight: 500;
+    }
+
+    .EpisodeProperty {
+      padding: 10px 0 0 0;
+      > span {
+        font-weight: 600;
+      }
+
+      .Link {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+
+    .Episodes {
+      padding: 10px 0 0 0;
+      font-weight: 600;
+
+      .Episode {
+        border: 1px solid #fff;
+        padding: 5px;
+        margin-top: 5px;
+        cursor: pointer;
+        transition: all 0.15s;
+        &:hover {
+          border: 2px solid #fff;
+          padding: 7px;
+          margin-top: 2px;
+          margin-bottom: -3px;
+          margin-left: -3px;
+          margin-right: -3px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 800px) {
+    flex-direction: row;
+    .ImageContainer {
+      .Image {
+        max-width: 600px;
+        min-width: 400px;
+      }
+    }
+    .ContentContainer {
+      padding-left: 20px;
+    }
+  }
+}

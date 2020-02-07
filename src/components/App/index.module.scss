@@ -1,6 +1,6 @@
 .App {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: calc(100vh - 40px);
   display: flex;
   flex-direction: column;
   padding: 20px;

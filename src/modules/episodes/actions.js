@@ -1,6 +1,11 @@
 import * as episodesConstants from './constants';
 
 
+export const loadEpisode = (episodeId) => ({
+  type: episodesConstants.LOAD_EPISODE_REQUEST,
+  episodeId,
+});
+
 export const loadEpisodes = (showId) => ({
   type: episodesConstants.LOAD_EPISODES_REQUEST,
   showId,
