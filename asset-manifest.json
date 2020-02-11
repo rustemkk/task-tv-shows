@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/task-tv-shows/static/css/main.c3973fc2.chunk.css",
+    "main.css": "/task-tv-shows/static/css/main.8762a0e1.chunk.css",
     "main.js": "/task-tv-shows/static/js/main.51870fd0.chunk.js",
     "main.js.map": "/task-tv-shows/static/js/main.51870fd0.chunk.js.map",
     "runtime-main.js": "/task-tv-shows/static/js/runtime-main.2adde000.js",
@@ -8,15 +8,15 @@
     "static/js/2.24395506.chunk.js": "/task-tv-shows/static/js/2.24395506.chunk.js",
     "static/js/2.24395506.chunk.js.map": "/task-tv-shows/static/js/2.24395506.chunk.js.map",
     "index.html": "/task-tv-shows/index.html",
-    "precache-manifest.e149dfbfb4242d83b3ce2358f4e26bf8.js": "/task-tv-shows/precache-manifest.e149dfbfb4242d83b3ce2358f4e26bf8.js",
+    "precache-manifest.21a83f7438702c3f71c7eeb503269c86.js": "/task-tv-shows/precache-manifest.21a83f7438702c3f71c7eeb503269c86.js",
     "service-worker.js": "/task-tv-shows/service-worker.js",
-    "static/css/main.c3973fc2.chunk.css.map": "/task-tv-shows/static/css/main.c3973fc2.chunk.css.map",
+    "static/css/main.8762a0e1.chunk.css.map": "/task-tv-shows/static/css/main.8762a0e1.chunk.css.map",
     "static/js/2.24395506.chunk.js.LICENSE.txt": "/task-tv-shows/static/js/2.24395506.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2adde000.js",
     "static/js/2.24395506.chunk.js",
-    "static/css/main.c3973fc2.chunk.css",
+    "static/css/main.8762a0e1.chunk.css",
     "static/js/main.51870fd0.chunk.js"
   ]
 }
