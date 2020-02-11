@@ -14,6 +14,10 @@ Runs the app in the development mode.
 <br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+### `npm test`
+
+Runs tests in watch mode.
+
 ### `npm build`
 
 Builds the app for production to the `build` folder.

@@ -4,7 +4,7 @@ import { combineReducers } from 'redux';
 import * as episodesConstants from './constants';
 
 
-const episodes = (state = {}, action) => {
+export const episodes = (state = {}, action) => {
   switch (action.type) {
     case episodesConstants.LOAD_EPISODES_SUCCESS:
       return { ...state, ...action.episodes };
@@ -13,7 +13,7 @@ const episodes = (state = {}, action) => {
   }
 };
 
-const episodesIds = (state = [], action) => {
+export const episodesIds = (state = [], action) => {
   switch (action.type) {
     case episodesConstants.LOAD_EPISODES_SUCCESS:
       return uniq([...state, ...action.episodesIds]);
