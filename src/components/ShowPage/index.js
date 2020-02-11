@@ -27,7 +27,7 @@ const mapDispatchToProps = {
   loadShow,
 };
 
-const ShowPage = ({ episodes, loadEpisodes, loadShow, show, showId }) => {
+export const ShowPage = ({ episodes, loadEpisodes, loadShow, show, showId }) => {
 
   useEffect(() => {
     if (showId && !show) {
@@ -42,7 +42,7 @@ const ShowPage = ({ episodes, loadEpisodes, loadShow, show, showId }) => {
   }, [loadEpisodes, showId]); // eslint-disable-line
 
   if (isNaN(showId) || get(show, 'status') === 404) {
-    return 'Show not found';
+    return 'Show not found.';
   }
 
   return !show ? null : (

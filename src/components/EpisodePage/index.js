@@ -23,7 +23,7 @@ const mapDispatchToProps = {
   loadEpisode,
 };
 
-const EpisodePage = ({ episode, episodeId, loadEpisode }) => {
+export const EpisodePage = ({ episode, episodeId, loadEpisode }) => {
 
   useEffect(() => {
     if (episodeId && !episode) {

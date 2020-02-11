@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "http://rustemkk.github.io/task-tv-shows",
   "dependencies": {
+    "@testing-library/jest-dom": "^5.1.1",
+    "@testing-library/react": "^9.4.0",
     "classnames": "^2.2.6",
     "fsevents": "^1.2.11",
     "lodash": "^4.17.15",
