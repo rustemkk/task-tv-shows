@@ -10,7 +10,10 @@ import { showsSchema } from './schemas';
 
 function* loadShowTask({ showId }) {
   try {
-    const result = yield apiGET(`/shows/${showId}`);
+    let result = yield apiGET(`/shows/${showId}`);
+    if (result.status === 404) {
+      result = { id: showId, ...result };
+    }
     const normalizedShows = normalize([result], showsSchema);
     yield put(showsActions.loadShowsSuccess(normalizedShows));
   } catch (err) {

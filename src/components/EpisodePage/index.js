@@ -31,6 +31,10 @@ const EpisodePage = ({ episode, episodeId, loadEpisode }) => {
     }
   }, [episode, episodeId, loadEpisode]);
 
+  if (isNaN(episodeId) || get(episode, 'status') === 404) {
+    return 'Episode not found.';
+  }
+
   return !episode ? null : (
     <div className={s.EpisodePage}>
       {get(episode, 'image.original') &&

@@ -12,7 +12,10 @@ import { getShowById } from 'modules/shows/selectors';
 
 function* loadEpisodeTask({ episodeId }) {
   try {
-    const result = yield apiGET(`/episodes/${episodeId}?embed=show`);
+    let result = yield apiGET(`/episodes/${episodeId}?embed=show`);
+    if (result.status === 404) {
+      result = { id: episodeId, ...result };
+    }
     const showId = get(result, '_embedded.show.id');
     const showName = get(result, '_embedded.show.name');
     delete result._embedded;

@@ -41,6 +41,10 @@ const ShowPage = ({ episodes, loadEpisodes, loadShow, show, showId }) => {
     }
   }, [loadEpisodes, showId]); // eslint-disable-line
 
+  if (isNaN(showId) || get(show, 'status') === 404) {
+    return 'Show not found';
+  }
+
   return !show ? null : (
     <div className={s.Show}>
       <div className={s.ImageContainer}>
