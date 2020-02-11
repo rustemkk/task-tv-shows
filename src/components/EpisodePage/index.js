@@ -2,7 +2,7 @@ import { get } from 'lodash';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { loadEpisode } from 'modules/episodes/actions';
 import { getEpisodeById } from 'modules/episodes/selectors';
@@ -25,8 +25,6 @@ const mapDispatchToProps = {
 
 const EpisodePage = ({ episode, episodeId, loadEpisode }) => {
 
-  const history = useHistory();
-
   useEffect(() => {
     if (episodeId && !episode) {
       loadEpisode(episodeId);
@@ -48,7 +46,9 @@ const EpisodePage = ({ episode, episodeId, loadEpisode }) => {
         <div className={s.EpisodeProperty}>
           <span>Show</span>
           {': '}
-          <span className={s.Link} onClick={() => history.push(`/show/${episode.showId}`)}>{episode.showName}</span>
+          <Link className={s.Link} to={`/show/${episode.showId}`}>
+            {episode.showName}
+          </Link>
         </div>
         <div className={s.EpisodeProperty}>
           <span>Season</span>

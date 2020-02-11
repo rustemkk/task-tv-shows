@@ -2,7 +2,7 @@ import { get } from 'lodash';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import RatingLabel from 'components/RatingLabel';
 import { loadShows } from 'modules/shows/actions';
@@ -21,8 +21,6 @@ const mapDispatchToProps = {
 
 const ShowsPage = ({ loadShows, shows }) => {
 
-  const history = useHistory();
-
   useEffect(() => {
     loadShows();
   }, [loadShows]);
@@ -30,7 +28,7 @@ const ShowsPage = ({ loadShows, shows }) => {
   return (
     <div className={s.Shows}>
       {shows.map(show =>
-        <div className={s.Show} key={show.id} onClick={() => history.push(`/show/${show.id}`)}>
+        <Link className={s.Show} key={show.id} to={`/show/${show.id}`}>
           <RatingLabel className={s.Rating} value={get(show, 'rating.average')} />
           <img alt={show.name} src={get(show, 'image.medium')} />
           <span className={s.Name}>
@@ -41,8 +39,9 @@ const ShowsPage = ({ loadShows, shows }) => {
           <span className={s.Genre}>
             {show.genres.join(', ')}
           </span>
-        </div>
+        </Link>
       )}
+      {/* to keep correct width of shows on the last row: */}
       {[...Array(50)].map((_, index) =>
         <div key={index} className={s.ShowPlaceholder} />
       )}

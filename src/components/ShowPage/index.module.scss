@@ -33,8 +33,10 @@
         border: 1px solid #fff;
         padding: 5px;
         margin-top: 5px;
-        cursor: pointer;
         transition: all 0.15s;
+        color: #fff;
+        text-decoration: none;
+        display: block;
         &:hover {
           border: 2px solid #fff;
           padding: 7px;

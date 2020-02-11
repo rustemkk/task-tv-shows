@@ -2,7 +2,7 @@ import { get } from 'lodash';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { loadEpisodes } from 'modules/episodes/actions';
 import { getEpisodesByShowId } from 'modules/episodes/selectors';
@@ -29,8 +29,6 @@ const mapDispatchToProps = {
 
 const ShowPage = ({ episodes, loadEpisodes, loadShow, show, showId }) => {
 
-  const history = useHistory();
-
   useEffect(() => {
     if (showId && !show) {
       loadShow(showId);
@@ -38,10 +36,10 @@ const ShowPage = ({ episodes, loadEpisodes, loadShow, show, showId }) => {
   }, [loadShow, show, showId]);
 
   useEffect(() => {
-    if (showId && !episodes.length <= 1) {
+    if (showId && episodes.length <= 1) {
       loadEpisodes(showId);
     }
-  }, [episodes, loadEpisodes, showId]);
+  }, [loadEpisodes, showId]); // eslint-disable-line
 
   return !show ? null : (
     <div className={s.Show}>
@@ -74,13 +72,13 @@ const ShowPage = ({ episodes, loadEpisodes, loadShow, show, showId }) => {
           <div className={s.Episodes}>
             Episodes:
             {episodes.map(episode =>
-              <div className={s.Episode} key={episode.id} onClick={() => history.push(`/episode/${episode.id}`)}>
+              <Link className={s.Episode} key={episode.id} to={`/episode/${episode.id}`}>
                 {episode.season}
                 {'x'}
                 {episode.number}
                 {' - '}
                 {episode.name}
-              </div>
+              </Link>
             )}
           </div>
         }
