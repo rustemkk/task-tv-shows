@@ -9,7 +9,7 @@
     "classnames": "^2.2.6",
     "fsevents": "^1.2.11",
     "lodash": "^4.17.15",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "normalizr": "^3.5.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
